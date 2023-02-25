@@ -10,7 +10,7 @@ sizes = [10, 50, 100, 250, 500]
 num_iter = 100
 
 # Results dictionary
-results = {'brute': {}, 'kadane': {}}
+results = {'brute': {}}
 
 # Iterate over sizes
 for size in sizes:
@@ -24,17 +24,11 @@ for size in sizes:
     end_time = timeit.default_timer()
     results['brute'][size] = end_time - start_time
 
-    # Time Kadane's algorithm
-    start_time = timeit.default_timer()
-    for _ in range(num_iter):
-        max_subarray_kadane(A)
-    end_time = timeit.default_timer()
-    results['kadane'][size] = end_time - start_time
 
     
 # Print results
 print("No. of iterations for timing:",num_iter)
 print("Results (time in seconds):")
-print("Size\tBrute force\tKadane")
+print("Size\tBrute force")
 for size in sizes:
-    print("{}\t{:.6f}\t{:.6f}".format(size, results['brute'][size], results['kadane'][size]))
+    print("{}\t{:.6f}".format(size, results['brute'][size]))

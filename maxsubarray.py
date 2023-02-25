@@ -7,10 +7,3 @@ def max_subarray_brute_force(A):
             if total > maxsum:
                 maxsum = total
     return maxsum
-
-def max_subarray_kadane(A):
-    max_end_here = max_far_end = A[0]
-    for x in A[1:]:
-        max_end_here = max(x, max_end_here + x)
-        max_far_end = max(max_far_end, max_end_here)
-    return max_far_end
