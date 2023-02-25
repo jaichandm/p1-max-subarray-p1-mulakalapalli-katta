@@ -30,3 +30,11 @@ for size in sizes:
         max_subarray_kadane(A)
     end_time = timeit.default_timer()
     results['kadane'][size] = end_time - start_time
+
+    
+# Print results
+print("No. of iterations for timing:",num_iter)
+print("Results (time in seconds):")
+print("Size\tBrute force\tKadane")
+for size in sizes:
+print("{}\t{:.6f}\t{:.6f}".format(size, results['brute'][size], results['kadane'][size]))
