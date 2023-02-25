@@ -1,6 +1,7 @@
 import unittest
 import random
 
+from maxsubarray import max_subarray_brute_force, max_subarray_kadane
 
 class TestMaxSubarray(unittest.TestCase):
     def generated_hand_test_1(self):
@@ -17,5 +18,5 @@ class TestMaxSubarray(unittest.TestCase):
         A = [random.randint(-100, 100) for _ in range(100)]
         self.assertEqual(max_subarray_brute_force(A), max_subarray_kadane(A))
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     unittest.main()
