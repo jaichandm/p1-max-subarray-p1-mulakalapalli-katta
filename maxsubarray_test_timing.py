@@ -37,4 +37,4 @@ print("No. of iterations for timing:",num_iter)
 print("Results (time in seconds):")
 print("Size\tBrute force\tKadane")
 for size in sizes:
-print("{}\t{:.6f}\t{:.6f}".format(size, results['brute'][size], results['kadane'][size]))
+    print("{}\t{:.6f}\t{:.6f}".format(size, results['brute'][size], results['kadane'][size]))
