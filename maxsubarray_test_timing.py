@@ -1,7 +1,7 @@
 import timeit
 import random
 
-from maxsubarray import max_subarray_brute_force, max_subarray_kadane
+from maxsubarray import max_subarray_brute_force
 
 # Sizes of array list A
 sizes = [10, 50, 100, 250, 500]
