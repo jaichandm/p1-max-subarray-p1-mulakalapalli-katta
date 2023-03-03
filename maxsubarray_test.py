@@ -18,6 +18,10 @@ class TestMaxSubarray(unittest.TestCase):
         A = [2,3,-2,-6, -4,-1,3,8]
         self.assertEqual(max_subarray_brute_force(A), 11)
         self.assertEqual(max_subarray_kadane(A), 11)
+    
+    def test_randomized(self):
+        A = [random.randint(-100, 100) for _ in range(100)]
+        self.assertEqual(max_subarray_brute_force(A), max_subarray_kadane(A))
 
 if __name__ == '__main__':
     unittest.main()
