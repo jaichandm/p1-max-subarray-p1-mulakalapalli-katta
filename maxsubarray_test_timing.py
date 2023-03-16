@@ -1,13 +1,21 @@
 import timeit
 import random
-
 from maxsubarray import max_subarray_brute_force, max_subarray_kadane
 
-# Sizes of array list A
-sizes = [10, 50, 100, 250, 500]
+import sys
 
 # Number of iterations for timing
-num_iter = 100
+if len(sys.argv) < 2 or sys.argv[1] == "":
+    num_iter = 100
+else:
+    try:
+        num_iter = int(sys.argv[1])
+    except ValueError:
+        print("Argument 1 is not an integer. So, choosing default value 100.")
+        num_iter = 100
+        
+# Sizes of array list A
+sizes = [10, 50, 100, 250, 500]
 
 # Results dictionary
 results = {'brute': {}, 'kadane': {}}
