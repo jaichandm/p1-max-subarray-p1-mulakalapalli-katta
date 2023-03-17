@@ -4,6 +4,31 @@
 
 ### Execution Instructions
 
+* Definations of Brute force and Kadanes algorithm in file maxsubarray.py
+* Unit test cases in file maxsubarray_test.py
+* Timing Code for Brute force and Kadanes algorithm in file maxsubarray_test_timing.py 
+
+
+Instructions for unit test in Python 
+
+```groovy
+python maxsubarray_test.py
+```
+Instructions for Timing 
+
+```groovy
+python maxsubarray_test_timing.py
+
+```
+
+* Instructions for different n values Timing Code: Changing N
+
+```groovy
+python maxsubarray_test_timing.py  n // instead of n choose interger value of n
+
+```
+
+
 To be completed by the student
 
 ### The Problem
